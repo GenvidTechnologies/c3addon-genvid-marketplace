@@ -48,3 +48,10 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Sample app current UI State
+*.uistate.json
+
+# zip file
+*.c3addon
+ios/
+html5/
