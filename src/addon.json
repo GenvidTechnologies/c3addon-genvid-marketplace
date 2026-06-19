@@ -6,7 +6,7 @@
 	"type": "plugin",
 	"name": "Genvid Marketplace",
 	"id": "Genvid_Marketplace",
-	"version": "1.0.0.0",
+	"version": "1.0.0.1",
 	"author": "Genvid Technologies, LLC",
 	"website": "https://bitbucket.org/genvidtech/c3addon-genvid-marketplace",
 	"documentation": "https://bitbucket.org/genvidtech/c3addon-genvid-marketplace",
