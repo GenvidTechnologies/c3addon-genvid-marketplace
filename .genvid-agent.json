@@ -7,6 +7,11 @@
   },
   "commands": {
     "lint": "npm run lint",
-    "build": "npm run build"
+    "build": "npm run build",
+    "validate": "npm run lint && npm run build"
+  },
+  "repo": {
+    "host": "github",
+    "default_branch": "main"
   }
 }
