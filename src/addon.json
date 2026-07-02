@@ -8,8 +8,8 @@
 	"id": "Genvid_Marketplace",
 	"version": "1.0.0.1",
 	"author": "Genvid Technologies, LLC",
-	"website": "https://bitbucket.org/genvidtech/c3addon-genvid-marketplace",
-	"documentation": "https://bitbucket.org/genvidtech/c3addon-genvid-marketplace",
+	"website": "https://github.com/GenvidTechnologies/c3addon-genvid-marketplace",
+	"documentation": "https://github.com/GenvidTechnologies/c3addon-genvid-marketplace",
 	"description": "Integration of the MarketplaceKit/InstallSource API",
 	"editor-scripts": [
 		"plugin.js"
