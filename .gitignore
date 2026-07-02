@@ -60,3 +60,6 @@ build*/
 
 # Claude Code local (personal) settings — share .claude/settings.json, not this
 .claude/settings.local.json
+
+# Transient planning artifact (gvt-dev plan-task) — local working file, not shared
+plan.md

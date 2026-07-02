@@ -40,7 +40,8 @@ const PLUGIN_CLASS = SDK.Plugins.Genvid_Marketplace = class MarketplacePlugin ex
 
         // Cordova Plugins
         this._info.AddCordovaPluginReference({
-            id: "cordova-plugin-marketplace"
+            id: "@genvidtech/cordova-plugin-marketplace",
+            version: "^1.1.2"
         });
         
         SDK.Lang.PopContext();

@@ -7,7 +7,7 @@
 			"genvid_marketplace": {
 				"name": "GenvidMarketplace",
 				"description": "Integration of MarketplaceKit/SourceInstall API.",
-				"help-url": "https://bitbucket.org/genvidtech/c3addon-genvid-marketplace",
+				"help-url": "https://github.com/GenvidTechnologies/c3addon-genvid-marketplace",
 				"properties": {
 				},
 				"aceCategories": {
