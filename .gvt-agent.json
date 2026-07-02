@@ -1,0 +1,19 @@
+{
+  "project": {
+    "name": "c3addon-genvidtech-marketplace",
+    "description": "Genvid Construct 3 marketplace addon (plugin) SDK",
+    "languages": ["typescript"]
+  },
+  "commands": {
+    "test": "",
+    "lint": "npm run lint",
+    "build": "npm run build",
+    "validate": "npm run lint && npm run build"
+  },
+  "repo": {
+    "host": "github",
+    "default_branch": "main"
+  },
+  "features": {},
+  "paths": {}
+}

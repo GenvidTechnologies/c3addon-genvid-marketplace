@@ -1,8 +1,8 @@
-<!-- Retroactive record. Decision date from commit e026c5f (2026-06-19). -->
+<!-- Superseded by 0006 (gvt-dev rename + GitHub-only remote). Retroactive record. Decision date from commit e026c5f (2026-06-19). -->
 
 # 0005. Adopt the genvid-dev contract; treat GitHub as the canonical host
 
-- **Status:** accepted
+- **Status:** superseded by [0006](0006-gvt-dev-contract-migration.md)
 - **Date:** 2026-06-19
 - **Issue:** — (no tracked issue; established in commit `e026c5f`)
 

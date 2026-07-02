@@ -46,6 +46,21 @@ Plain GitHub-style **imperative subject lines**. Do **not** use the `BUR-XXXX:`
 (or `chore - BUR-0000:`) prefix seen in older history — those are legacy Jira
 tickets that no longer map to anything on GitHub.
 
+## Agent contract files
+
+Two similarly-named JSON files sit at the repo root and serve **two different
+plugins** — don't confuse them:
+
+- `.gvt-agent.json` — the **gvt-dev** workflow contract. Holds `commands.validate`
+  (`npm run lint && npm run build`), `repo.host` (`github`) and
+  `repo.default_branch` (`main`), read by the gvt-dev skills/agents (validator,
+  create-pr, rebase, …). Validate with `/gvt-dev:audit-conventions`. See
+  [ADR 0006](docs/decisions/0006-gvt-dev-contract-migration.md).
+- `.genvid-agent.json` — the **genvid-c3** C3 marker (see below). Holds only
+  `features.c3` and `paths.c3project`. It formerly also carried the workflow
+  `commands`/`repo` blocks under the old `genvid-dev` name; those moved to
+  `.gvt-agent.json` and were removed here to avoid two files drifting apart.
+
 ## genvid-c3 plugin wiring
 
 This repo adopts the `genvid-c3` plugin convention, scoped to the nested `sample/` project:
