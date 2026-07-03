@@ -1,6 +1,6 @@
 # 0006. Migrate to the gvt-dev contract (`.gvt-agent.json`); remotes reconciled to GitHub-only
 
-- **Status:** accepted
+- **Status:** accepted _(the two-file split is superseded by [0007](0007-consolidate-agent-config.md); the remote-reconciliation decisions still stand)_
 - **Date:** 2026-07-02
 - **Issue:** — (no tracked issue; established during a convention audit)
 

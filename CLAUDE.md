@@ -46,30 +46,30 @@ Plain GitHub-style **imperative subject lines**. Do **not** use the `BUR-XXXX:`
 (or `chore - BUR-0000:`) prefix seen in older history — those are legacy Jira
 tickets that no longer map to anything on GitHub.
 
-## Agent contract files
+## Agent contract file
 
-Two similarly-named JSON files sit at the repo root and serve **two different
-plugins** — don't confuse them:
+A single `.gvt-agent.json` at the repo root serves **both** the `gvt-dev`
+workflow plugin and the `gvt-construct3` C3 plugin — there is no longer a
+separate `.genvid-agent.json` (see
+[ADR 0007](docs/decisions/0007-consolidate-agent-config.md)):
 
-- `.gvt-agent.json` — the **gvt-dev** workflow contract. Holds `commands.validate`
-  (`npm run lint && npm run build`), `repo.host` (`github`) and
-  `repo.default_branch` (`main`), read by the gvt-dev skills/agents (validator,
-  create-pr, rebase, …). Validate with `/gvt-dev:audit-conventions`. See
+- **gvt-dev workflow contract** — `commands.validate` (`npm run lint && npm run
+  build`), `repo.host` (`github`) and `repo.default_branch` (`main`), read by the
+  gvt-dev skills/agents (validator, create-pr, rebase, …). Validate with
+  `/gvt-dev:audit-conventions`. See
   [ADR 0006](docs/decisions/0006-gvt-dev-contract-migration.md).
-- `.genvid-agent.json` — the **genvid-c3** C3 marker (see below). Holds only
-  `features.c3` and `paths.c3project`. It formerly also carried the workflow
-  `commands`/`repo` blocks under the old `genvid-dev` name; those moved to
-  `.gvt-agent.json` and were removed here to avoid two files drifting apart.
+- **gvt-construct3 C3 marker** — `features.c3` and `paths.c3project` (see below).
 
-## genvid-c3 plugin wiring
+## gvt-construct3 plugin wiring
 
-This repo adopts the `genvid-c3` plugin convention, scoped to the nested `sample/` project:
+This repo adopts the `gvt-construct3` plugin convention (formerly `genvid-c3`),
+scoped to the nested `sample/` project:
 
-- `.genvid-agent.json` (repo root) — the C3 marker; `paths.c3project` points at `sample/project.c3proj`.
+- `.gvt-agent.json` (repo root) — the C3 marker; `paths.c3project` points at `sample/project.c3proj`.
 - `sample/domain-config.json`, `sample/construct3-chef.config.json` — live at the **C3 project root** (`sample/`), not the repo root.
 - The bundled `construct3-chef` (≥0.10.2) and `c3-domain-manager` (≥0.5.0) MCP
   servers **auto-discover** the project root (an immediate child containing
   `project.c3proj`), so they operate on `sample/` with no `--project-dir` flag.
   Override with the `C3_PROJECT_DIR` env var if needed.
 
-Run `/genvid-c3:audit-c3-conventions` to validate the contract.
+Run `/gvt-construct3:audit-c3-conventions` to validate the contract.
