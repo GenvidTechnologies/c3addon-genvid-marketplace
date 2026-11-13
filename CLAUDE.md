@@ -59,6 +59,9 @@ separate `.genvid-agent.json` (see
   `/gvt-dev:audit-conventions`. See
   [ADR 0006](docs/decisions/0006-gvt-dev-contract-migration.md).
 - **gvt-construct3 C3 marker** — `features.c3` and `paths.c3project` (see below).
+- **Issue triage** — the `bugTracker` block and `paths['docs/issue-triage.md']`,
+  read by `/gvt-dev:triage-issues`. The triage conventions (labels, priorities,
+  `gh` recipes) live in [`wiki/issue-triage.md`](wiki/issue-triage.md).
 
 ## gvt-construct3 plugin wiring
 
