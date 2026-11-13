@@ -20,6 +20,10 @@ npm run all:posix       # lint + build + zip -> Genvid_Marketplace.c3addon (zip)
 npx http-server src --cors   # dev: load http://localhost:8080/addon.json in C3 (not 127.0.0.1, CSP)
 ```
 
+Run `npm ci` once in a new worktree before the first commit. The gvt-dev
+pre-commit hook runs `npm run lint`, and without `node_modules` it fails with
+`'eslint' is not recognized`, which looks like a broken toolchain.
+
 ## CI / Release (GitHub Actions)
 
 CI lives in `.github/workflows/` (the repo migrated off CircleCI):
