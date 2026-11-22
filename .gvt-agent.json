@@ -17,8 +17,13 @@
   "features": {
     "c3": true
   },
+  "wiki": {
+    "wikiDir": "wiki"
+  },
   "paths": {
     "c3project": "sample/project.c3proj",
+    "docs/TOC.md": "wiki/index.md",
+    "docs/decisions/": "wiki/decisions/",
     "docs/issue-triage.md": "wiki/issue-triage.md"
   },
   "bugTracker": {

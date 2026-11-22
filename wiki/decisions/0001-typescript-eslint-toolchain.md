@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'TypeScript + flat ESLint toolchain for the addon'
+description: 'TypeScript + flat ESLint toolchain for the addon'
+tags: [decisions]
+status: stable
+---
 <!-- Retroactive record. Decision date from commit 8939ef6 (2025-05-13). -->
 
 # 0001. TypeScript + flat ESLint toolchain for the addon
