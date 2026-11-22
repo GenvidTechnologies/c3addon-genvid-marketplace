@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'Consolidate agent config into a single `.gvt-agent.json`'
+description: 'Consolidate agent config into a single `.gvt-agent.json`'
+tags: [decisions]
+status: stable
+---
 # 0007. Consolidate agent config into a single `.gvt-agent.json`
 
 - **Status:** accepted

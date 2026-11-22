@@ -55,17 +55,42 @@ tickets that no longer map to anything on GitHub.
 A single `.gvt-agent.json` at the repo root serves **both** the `gvt-dev`
 workflow plugin and the `gvt-construct3` C3 plugin — there is no longer a
 separate `.genvid-agent.json` (see
-[ADR 0007](docs/decisions/0007-consolidate-agent-config.md)):
+[ADR 0007](wiki/decisions/0007-consolidate-agent-config.md)):
 
 - **gvt-dev workflow contract** — `commands.validate` (`npm run lint && npm run
   build`), `repo.host` (`github`) and `repo.default_branch` (`main`), read by the
   gvt-dev skills/agents (validator, create-pr, rebase, …). Validate with
   `/gvt-dev:audit-conventions`. See
-  [ADR 0006](docs/decisions/0006-gvt-dev-contract-migration.md).
+  [ADR 0006](wiki/decisions/0006-gvt-dev-contract-migration.md).
 - **gvt-construct3 C3 marker** — `features.c3` and `paths.c3project` (see below).
 - **Issue triage** — the `bugTracker` block and `paths['docs/issue-triage.md']`,
   read by `/gvt-dev:triage-issues`. The triage conventions (labels, priorities,
   `gh` recipes) live in [`wiki/issue-triage.md`](wiki/issue-triage.md).
+- **Documentation** — `wiki.wikiDir` (`wiki`) and the `paths` overrides for
+  `docs/TOC.md` (`wiki/index.md`) and `docs/decisions/` (`wiki/decisions/`).
+  gvt-dev 6.0.0 and later derive these same locations from `wiki.wikiDir`
+  (GenvidTechnologies/claude-code-plugin-gvt-dev#938). An older gvt-dev falls
+  back to `docs/TOC.md` and `docs/decisions/` when the overrides are unset, so
+  keep them.
+
+## Documentation
+
+The wiki is the only documentation surface: there is no `docs/` folder. It
+follows the `maintain-wiki` format (gvt-wiki plugin): every page opens with OKF
+frontmatter, [`wiki/index.md`](wiki/index.md) lists the pages,
+[`wiki/log.md`](wiki/log.md) records each change to them (newest first), and
+[`wiki/schema.md`](wiki/schema.md) holds the rules. A new or updated page gets
+an index entry and a log entry. Decision records live in
+[`wiki/decisions/`](wiki/decisions/index.md); add one with
+`/gvt-dev:create-adr`. Check the wiki with `/gvt-wiki:maintain-wiki lint`.
+
+The lint script (`wiki-lint.mjs` in the gvt-wiki plugin) checks dead links,
+out-of-bundle links and orphaned pages only. It does not read frontmatter
+(GenvidTechnologies/claude-code-plugin-gvt-wiki#19), so a page with no
+frontmatter, an empty `type`, or a `title` that differs from its H1 passes it.
+Check those by reading the page. `audit-conventions` does not check `wiki/`
+either: its link and orphan scans skip the wiki bundle and say so in their Info
+lines.
 
 ## gvt-construct3 plugin wiring
 

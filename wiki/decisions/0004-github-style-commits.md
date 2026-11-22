@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'GitHub-style commit subjects; drop the Jira `BUR-XXXX` prefix'
+description: 'GitHub-style commit subjects; drop the Jira `BUR-XXXX` prefix'
+tags: [decisions]
+status: stable
+---
 <!-- Retroactive record. Decision date from commit a21694a (2026-06-19). -->
 
 # 0004. GitHub-style commit subjects; drop the Jira `BUR-XXXX` prefix

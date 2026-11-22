@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'Adopt genvid-c3 with the C3 project nested under `sample/`; fix tooling upstream'
+description: 'Adopt genvid-c3 with the C3 project nested under `sample/`; fix tooling upstream'
+tags: [decisions]
+status: stable
+---
 <!-- Retroactive record. Decision date from commit 95de59e (2026-06-19). -->
 
 # 0003. Adopt genvid-c3 with the C3 project nested under `sample/`; fix tooling upstream
