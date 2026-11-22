@@ -92,6 +92,14 @@ Express a dependency with a comment on the blocked issue: `Blocked by #<id>`
 (optionally `Blocks #<id>` on the other). For umbrellas, list dependencies as a
 GitHub task-list under a `Depends on` heading.
 
+When a proposed change rests on the state of an issue or a release in another
+repository (for example "until a gvt-dev issue ships"), the issue names it in
+full (`<owner>/<repo>#<N>`) and says which step depends on it. Triage and the
+start of the work both read that issue's current state. A premise of this kind
+can go out of date between triage and the work: in #6, step 3 gave
+GenvidTechnologies/claude-code-plugin-gvt-dev#938 as not shipped, and it had
+closed the day before the work started.
+
 ## Mutation recipes
 
 The exact commands the triage skill runs to apply **approved** changes. `{id}`,
