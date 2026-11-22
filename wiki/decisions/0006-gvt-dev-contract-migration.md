@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'Migrate to the gvt-dev contract (`.gvt-agent.json`); remotes reconciled to GitHub-only'
+description: 'Migrate to the gvt-dev contract (`.gvt-agent.json`); remotes reconciled to GitHub-only'
+tags: [decisions]
+status: stable
+---
 # 0006. Migrate to the gvt-dev contract (`.gvt-agent.json`); remotes reconciled to GitHub-only
 
 - **Status:** accepted _(the two-file split is superseded by [0007](0007-consolidate-agent-config.md); the remote-reconciliation decisions still stand)_
@@ -33,7 +40,8 @@ file (for `features.c3` / `paths.c3project`), and it declares no expectation for
   home (reusing the toolchain from [0001](0001-typescript-eslint-toolchain.md);
   no test suite exists).
 - Copy the plugin's canonical `CONVENTIONS.md` to the repo root (part of the
-  gvt-dev contract) and index it from [`../TOC.md`](../TOC.md).
+  gvt-dev contract) and index it from the documentation index (then
+  `docs/TOC.md`, now the [wiki index](../index.md)).
 - Strip the vestigial `commands`/`repo` blocks from `.genvid-agent.json`, leaving
   it a pure C3 marker (`features.c3`, `paths.c3project`). Each file now has one
   owner — no duplicated keys to drift.

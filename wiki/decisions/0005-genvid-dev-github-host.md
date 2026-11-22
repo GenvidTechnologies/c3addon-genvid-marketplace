@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'Adopt the genvid-dev contract; treat GitHub as the canonical host'
+description: 'Adopt the genvid-dev contract; treat GitHub as the canonical host'
+tags: [decisions]
+status: deprecated
+---
 <!-- Superseded by 0006 (gvt-dev rename + GitHub-only remote). Retroactive record. Decision date from commit e026c5f (2026-06-19). -->
 
 # 0005. Adopt the genvid-dev contract; treat GitHub as the canonical host

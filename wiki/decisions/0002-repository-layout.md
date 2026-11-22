@@ -1,3 +1,10 @@
+---
+type: decision-context
+title: 'Repository layout: addon in `src/`, sample C3 project in `sample/`'
+description: 'Repository layout: addon in `src/`, sample C3 project in `sample/`'
+tags: [decisions]
+status: stable
+---
 <!-- Retroactive record. Decision date from commit 3496de7 (2025-06-02). -->
 
 # 0002. Repository layout: addon in `src/`, sample C3 project in `sample/`

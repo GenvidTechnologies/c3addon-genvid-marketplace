@@ -2,6 +2,8 @@
 type: convention
 title: Issue Triage Conventions
 description: Labels, priorities, required fields and the gh recipes that /gvt-dev:triage-issues uses for this repository's issues.
+tags: [triage]
+status: stable
 ---
 
 # Issue Triage Conventions
