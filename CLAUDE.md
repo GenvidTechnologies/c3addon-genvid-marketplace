@@ -84,6 +84,14 @@ an index entry and a log entry. Decision records live in
 [`wiki/decisions/`](wiki/decisions/index.md); add one with
 `/gvt-dev:create-adr`. Check the wiki with `/gvt-wiki:maintain-wiki lint`.
 
+The lint script (`wiki-lint.mjs` in the gvt-wiki plugin) checks dead links,
+out-of-bundle links and orphaned pages only. It does not read frontmatter
+(GenvidTechnologies/claude-code-plugin-gvt-wiki#19), so a page with no
+frontmatter, an empty `type`, or a `title` that differs from its H1 passes it.
+Check those by reading the page. `audit-conventions` does not check `wiki/`
+either: its link and orphan scans skip the wiki bundle and say so in their Info
+lines.
+
 ## gvt-construct3 plugin wiring
 
 This repo adopts the `gvt-construct3` plugin convention (formerly `genvid-c3`),
